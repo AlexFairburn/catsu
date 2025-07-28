@@ -90,7 +90,7 @@ Due to my brilliance, empty arrays cannot exist. For an
 ```
 Arrays start at 0 and can be accessed using `[<index>].<array>`
 ```
-     dv names:[str] = ["Wilson", "Cuddy", "House"];
+    dv names:[str] = ["Wilson", "Cuddy", "House"];
     dv theGoat:str = [0].names;
 ```
 
@@ -114,7 +114,7 @@ The same rationale applies for strings.
 
 
 ## If/Else
-```
+``` 
     if <expression>
     {
         execute this code
@@ -133,8 +133,9 @@ The same rationale applies for strings.
     {
         dv isOld:bool = False;
     }
-
-    Alternatively,
+```
+Alternatively,
+```
     dv age:int = 99;
     dv isOld:bool = False;
     if (> age 89) {mv isOld = True;}
@@ -264,8 +265,8 @@ To work with subroutines, use "define sub" and "gosub" statements.
 
     ds incrementAndOutput
     {
-    mv i = + i 1;
-    pr i;
+        mv i = + i 1;
+        pr i;
     }
     
     gs incrementAndOutput;
