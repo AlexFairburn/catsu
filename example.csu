@@ -1,0 +1,38 @@
+dv name:str = "Geoffrey";
+dv age:int = 102;
+
+if > age 84
+{
+  dv isOld:bool = True;
+}
+el
+{
+  dv isOld:bool = False;
+}
+
+if isOld{pr , name "is old";}
+
+dv sales:[int] = [12, 59, 30, 0, 49, 100];
+mv [3].sales = 50;
+
+df sumList(nums:int)(return:int)
+{
+  fo {dv i:int;}(< i size(nums)){mv i = + i 1;}
+  {
+    mv return = + return [i].nums;
+  }
+}
+
+pr , "Total sales:" toString(sumList(sales));
+
+dv calcArea:lam = \(r:float) -> (* 3.14 (^ r 2.0));
+
+df mapFloat(nums:[float])(func:lam)(return:[float])
+{
+  fo {dv i:int;}(< i size(nums)){mv i = + i 1;}
+  {
+    mv [i].nums = \func([i].nums);
+  }
+  rt nums;
+}
+pr mapFloat([3.0, 5.0, 6.6, 48.2])(calcArea);
